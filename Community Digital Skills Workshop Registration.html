@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="registration-card">
+        <h1>Community Digital Skills Workshop Registration</h1>
+                    <div class="codes-table-wrap">
+                <table class="codes-table">
+                    <caption>Available workshop codes</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Workshop</th>
+                            <th scope="col">Fee (UGX)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>WEB</code></td>
+                            <td>Web Design</td>
+                            <td>40,000</td>
+                        </tr>
+                        <tr>
+                            <td><code>DIG</code></td>
+                            <td>Digital Literacy</td>
+                            <td>25,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="participantName">Participant Name:</label>
+                <input type="text" id="participantName" name="participantName"
+                       required autocomplete="name" placeholder="Eg. SSOZI DOE">
+            </div>
+
+            <div class="form-group">
+                <label for="participantAge">Age:</label>
+                <input type="number" id="participantAge" name="participantAge"
+                       min="1" step="1" inputmode="numeric"
+                       required placeholder="Eg. 16">
+            </div>
+
+            <div class="form-group">
+                <label for="participantAge">Workshop</label>
+                <select name="workshopCode" id="workshopCode" required>
+                    <option value="" disabled selected>Choose workshop</option>
+                    <option value="WEB">WEB — Web Design (UGX 40,000)</option>
+                    <option value="DIG">DIG — Digital Literacy (UGX 25,000)</option>
+                    <option value="COG">COG — Test Unrecognised Code</option>
+                </select>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <div class="result" id="registrationResult" role="status" aria-live="polite"></div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
